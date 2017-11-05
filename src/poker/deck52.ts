@@ -10,56 +10,6 @@ interface Card {
     suit: Suit;
 }
 
-function parse_value(c: string): Face | null {
-    // c is expected to be one charachter
-    switch (c) {
-        case '2':
-            return Face.TWO;
-        case '3':
-            return Face.THREE;
-        case '4':
-            return Face.FOUR;
-        case '5':
-            return Face.FIVE;
-        case '6':
-            return Face.SIX;
-        case '7':
-            return Face.SEVEN;
-        case '8':
-            return Face.EIGHT;
-        case '9':
-            return Face.NINE;
-        case 'T':
-            return Face.TEN;
-        case 'J':
-            return Face.JACK;
-        case 'Q':
-            return Face.QUEEN;
-        case 'K':
-            return Face.KING;
-        case 'A':
-            return Face.ACE;
-        default:
-            return null;
-    }
-}
-
-function parse_suit(s: string): Suit | null {
-    switch (s) {
-        case 'C':
-            return Suit.CLUBS;
-        case 'D':
-            return Suit.DIAMONDS;
-        case 'H':
-            return Suit.HEARTS;
-        case 'S':
-            return Suit.SPADES;
-        default:
-            return null;
-    }
-}
-
-
 function order(a: Card, b: Card): -1 | 0 | 1 {
     if(a.face < b.face) { return -1; }
     if(a.face > b.face) { return 1; }
@@ -70,69 +20,90 @@ function same_suit(a: Card, b: Card) {
     return a.suit === b.suit;
 }
 
-function parse(input: string): Card[] {
-    return input
-        .split(' ')
-        .map((s): Card => {
-            return {
-                face: parse_value(s.charAt(0))!,
-                suit: parse_suit(s.charAt(1))!,
-            };
-        });
+const decode_Face = new Map<string, Face>([
+    ['2', Face.TWO],
+    ['3', Face.THREE],
+    ['4', Face.FOUR],
+    ['5', Face.FIVE],
+    ['6', Face.SIX],
+    ['7', Face.SEVEN],
+    ['8', Face.EIGHT],
+    ['9', Face.NINE],
+    ['T', Face.TEN],
+    ['J', Face.JACK],
+    ['Q', Face.QUEEN],
+    ['K', Face.KING],
+    ['A', Face.ACE],
+]);
+const encode_Face = new Map<Face, string>([
+    [Face.TWO, '2'],
+    [Face.THREE, '3'],
+    [Face.FOUR, '4'],
+    [Face.FIVE, '5'],
+    [Face.SIX, '6'],
+    [Face.SEVEN, '7'],
+    [Face.EIGHT, '8'],
+    [Face.NINE, '9'],
+    [Face.TEN, 'T'],
+    [Face.JACK, 'J'],
+    [Face.QUEEN, 'Q'],
+    [Face.KING, 'K'],
+    [Face.ACE, 'A'],
+]);
+const decode_Suit = new Map<string, Suit>([
+    ['C', Suit.CLUBS],
+    ['D', Suit.DIAMONDS],
+    ['H', Suit.HEARTS],
+    ['S', Suit.SPADES],
+]);
+const encode_Suit = new Map<Suit, string>([
+    [Suit.CLUBS, 'C'],
+    [Suit.DIAMONDS, 'D'],
+    [Suit.HEARTS, 'H'],
+    [Suit.SPADES, 'S'],
+]);
+
+function decoder(s: string): Card | null {
+    // s must be of length 2
+    if(s.length !== 2) {
+        return null;
+    }
+    const face = decode_Face.get(s.charAt(0));
+    if (face === undefined) {
+        return null;
+    }
+    const suit = decode_Suit.get(s.charAt(1));
+    if (suit === undefined) {
+        return null;
+    }
+    return {face, suit};
 }
 
 /**
- * Make two-letter representation of the card
+ * Parse string into the cards
+ * @returns List of cards or null if the input does not represent a sequence of cards
  */
-function encode(c: Card): string {
-    const face = function(f: Face): string | null {
-        switch (f) {
-            case Face.TWO:
-                return '2';
-            case Face.THREE:
-                return '3';
-            case Face.FOUR:
-                return '4';
-            case Face.FIVE:
-                return '5';
-            case Face.SIX:
-                return '6';
-            case Face.SEVEN:
-                return '7';
-            case Face.EIGHT:
-                return '8';
-            case Face.NINE:
-                return '9';
-            case Face.TEN:
-                return 'T';
-            case Face.JACK:
-                return 'J';
-            case Face.QUEEN:
-                return 'Q';
-            case Face.KING:
-                return 'K';
-            case Face.ACE:
-                return 'A';
-            default:
-                return null;
+function parse(input: string): Card[] | null {
+    let cards: Card[] = [];
+    for(let s of input.split(' ')) {
+        const card = decoder(s);
+        if (card === null) {
+            return null;
         }
-    };
-    const suit = function(s: Suit): string | null {
-        switch (s) {
-            case Suit.CLUBS:
-                return 'C';
-            case Suit.DIAMONDS:
-                return 'D';
-            case Suit.HEARTS:
-                return 'H';
-            case Suit.SPADES:
-                return 'S';
-            default:
-                return null;
-        }
-    };
-
-    return `${face(c.face)}${suit(c.suit)}`;
+        cards = [...cards, card];
+    }
+    return cards;
 }
 
-export { Face, Suit, Card, parse, encode, order, same_suit };
+/**
+ * Make two-letter representations of some cards
+ */
+function stringify(many_or_one: Card | Card[]): string {
+    return many_or_one instanceof Array
+            ? many_or_one
+                .map(c=> `${encode_Face.get(c.face)}${encode_Suit.get(c.suit)}`)
+                .join(' ')
+            : `${encode_Face.get(many_or_one.face)}${encode_Suit.get(many_or_one.suit)}`;
+}
+
+export { Face, Suit, Card, order, same_suit, parse, stringify };

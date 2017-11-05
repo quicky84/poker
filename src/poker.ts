@@ -12,7 +12,7 @@ function summarize(cards: CardEx[], prefix: string = ""): string {
     let hand = prefix;
     let from = prefix;
     for(let card of cards) {
-        const h_ = `${Deck.Face[card.card.face]}_${Deck.Suit[card.card.suit]}`;
+        const h_ = Deck.stringify(card.card);
         const f_ = `${new Array(h_.length-1).join(' ')}`;
         hand = `${hand}${h_} `;
         from = `${from}${f_}${card.loc === Loc.DECK ? ' D': ' H'} `;
@@ -77,9 +77,13 @@ function optimize(keep: CardEx[], consider: CardEx[], budget: number, log: boole
 }
 
 
-function best_hand(input: string): {hand: string, deck: string, best: string} {
+function best_hand(input: string): {hand: string, deck: string, best: string} | null {
+    const ten_cards = Deck.parse(input);
+    if (ten_cards === null) {
+        return null;
+    }
+
     const
-        ten_cards = Deck.parse(input),
         hand = ten_cards.slice(0, 5).map((c): CardEx=> ({card: c, loc: Loc.HAND})),
         deck = ten_cards.slice(5, 10).map((c): CardEx=> ({card: c, loc: Loc.DECK}));
 
@@ -100,8 +104,8 @@ function best_hand(input: string): {hand: string, deck: string, best: string} {
     }
 
     return {
-        hand: hand.map(c=> Deck.encode(c.card)).join(' '),
-        deck: deck.map(c=> Deck.encode(c.card)).join(' '),
+        hand: Deck.stringify(hand.map(c=> c.card)),
+        deck: Deck.stringify(deck.map(c=> c.card)),
         best: bh.combination!
     };
 }

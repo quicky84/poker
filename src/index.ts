@@ -14,5 +14,9 @@ const inputs = [
 
 for (const input of inputs) {
     const bh = best_hand(input);
-    console.log(`Hand: ${bh.hand} Deck: ${bh.deck} Best hand: ${bh.best}`);
+    if (bh === null) {
+        console.log("invalid input");
+    } else {
+        console.log(`Hand: ${bh.hand} Deck: ${bh.deck} Best hand: ${bh.best}`);
+    }
 }
