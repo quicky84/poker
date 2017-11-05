@@ -24,6 +24,13 @@ function better_hand(h1: HandValue, h2: HandValue): HandValue {
     return h1.value > h2.value ? h1 : h2;
 }
 
+/**
+ * Recursievly builds up a hand and scores it
+ * @param keep Cards being kept
+ * @param consider Cards to consider
+ * @param budget Number of cards in hand player is allowed to keep
+ * @param log should the log be printed
+ */
 function optimize(keep: CardEx[], consider: CardEx[], budget: number, log: boolean = false): HandValue {
     // `consider` is sorted w.r.t. the face
     if(log){
