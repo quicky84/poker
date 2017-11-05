@@ -85,15 +85,21 @@ function optimize(keep: CardEx[], consider: CardEx[], budget: number, log: boole
 }
 
 
-function best_hand(input: string): {hand: string, deck: string, best: string} | null {
-    const ten_cards = Deck.parse(input);
-    if (ten_cards === null) {
+function best_hand(input: string, log: boolean = false): {hand: string, deck: string, best: string} | null {
+    const cards = Deck.parse(input);
+    if (cards === null) {
+        // could not parse the input
+        return null;
+    }
+
+    if (cards.length < 5 || cards.length > 10) {
+        // too few cards even for a hand
         return null;
     }
 
     const
-        hand = ten_cards.slice(0, 5).map((c): CardEx=> ({card: c, loc: Loc.HAND})),
-        deck = ten_cards.slice(5, 10).map((c): CardEx=> ({card: c, loc: Loc.DECK}));
+        hand = cards.slice(0, 5).map((c): CardEx=> ({card: c, loc: Loc.HAND})),
+        deck = cards.slice(5).map((c): CardEx=> ({card: c, loc: Loc.DECK}));
 
     // variable to hold the best hand
     // initialize it with the negative value,
@@ -107,9 +113,11 @@ function best_hand(input: string): {hand: string, deck: string, best: string} | 
 
         // sort cards from lowest to highest by value
         hand_ex.sort((a, b)=> Deck.order(a.card, b.card));
-        // console.log(`On hand:\n${summarize(hand_ex)}`);
+        if(log){
+            console.log(`On hand:\n${summarize(hand_ex)}`);
+        }
 
-        const some_hand = optimize([], hand_ex, 5 - n);
+        const some_hand = optimize([], hand_ex, 5 - n, log);
 
         bh = better_hand(bh, some_hand);
     }
