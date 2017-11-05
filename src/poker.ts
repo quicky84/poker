@@ -1,5 +1,5 @@
 import * as Deck from './poker/deck52';
-import {Combination, hand_value, HandValue, better_hand} from './poker/combinations';
+import {Combination, hand_value, HandValue} from './poker/combinations';
 
 enum Loc { DECK, HAND }
 
@@ -18,6 +18,10 @@ function summarize(cards: CardEx[], prefix: string = ""): string {
         from = `${from}${f_}${card.loc === Loc.DECK ? ' D': ' H'} `;
     }
     return `${hand}\n${from}`;
+}
+
+function better_hand(h1: HandValue, h2: HandValue): HandValue {
+    return h1.value > h2.value ? h1 : h2;
 }
 
 function optimize(keep: CardEx[], consider: CardEx[], budget: number, log: boolean = false): HandValue {
