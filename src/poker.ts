@@ -84,7 +84,13 @@ function optimize(keep: CardEx[], consider: CardEx[], budget: number, log: boole
     return bh;
 }
 
-
+/**
+ * Computes the best poker hand given a sequence of 10 cards: 5 in hand, 5 in the deck
+ * @param input encoded string representation of the cards
+ * @param log governs whether the log trail is presented
+ * @returns hand contains cards in hand, deck contains cards in the deck, best is the description of the best hand,
+ *          or null if the input is invalid
+ */
 function best_hand(input: string, log: boolean = false): {hand: string, deck: string, best: string} | null {
     const cards = Deck.parse(input);
     if (cards === null) {
