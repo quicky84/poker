@@ -10,6 +10,11 @@ interface Card {
     suit: Suit;
 }
 
+/**
+ * -1 if the first card has lower rank than the second
+ * 0, if the same rank
+ * 1, the second card has larger rank than the first
+ */
 function order(a: Card, b: Card): -1 | 0 | 1 {
     if(a.face < b.face) { return -1; }
     if(a.face > b.face) { return 1; }
