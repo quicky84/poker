@@ -1,0 +1,4220 @@
+
+> btc@0.0.1 start /home/ve/dev/btc
+> ts-node src/index.ts
+
+===================
+Keep:
+
+
+Consider:
+TWO_CLUBS THREE_CLUBS NINE_SPADES ACE_HEARTS ACE_DIAMONDS 
+        H           H           H          H            H 
+Budget: 5
+
+===================
+Keep:
+TWO_CLUBS 
+        H 
+Consider:
+THREE_CLUBS NINE_SPADES ACE_HEARTS ACE_DIAMONDS 
+          H           H          H            H 
+Budget: 4
+
+===================
+- Keep:
+- TWO_CLUBS THREE_CLUBS 
+-         H           H 
+- Consider:
+- NINE_SPADES ACE_HEARTS ACE_DIAMONDS 
+-           H          H            H 
+- Budget: 3
+
+===================
+- - Keep:
+- - TWO_CLUBS THREE_CLUBS NINE_SPADES 
+- -         H           H           H 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 2
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS NINE_SPADES ACE_HEARTS 
+- - -         H           H           H          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 1
+
+===================
+- - - - Keep:
+- - - - TWO_CLUBS THREE_CLUBS NINE_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - - -         H           H           H          H            H 
+- - - - Consider:
+- - - - 
+- - - - 
+- - - - Budget: 0
+
+>>> Hand: TWO_CLUBS THREE_CLUBS NINE_SPADES ACE_HEARTS ACE_DIAMONDS 
+        H           H           H          H            H 
+>>> one-pair of 1040224
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS NINE_SPADES ACE_DIAMONDS 
+- - -         H           H           H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 1
+
+===================
+- - Keep:
+- - TWO_CLUBS THREE_CLUBS ACE_HEARTS 
+- -         H           H          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 2
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS ACE_HEARTS ACE_DIAMONDS 
+- - -         H           H          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 1
+
+===================
+- - Keep:
+- - TWO_CLUBS THREE_CLUBS ACE_DIAMONDS 
+- -         H           H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 2
+
+===================
+- Keep:
+- TWO_CLUBS NINE_SPADES 
+-         H           H 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 3
+
+===================
+- - Keep:
+- - TWO_CLUBS NINE_SPADES ACE_HEARTS 
+- -         H           H          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 2
+
+===================
+- - - Keep:
+- - - TWO_CLUBS NINE_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - -         H           H          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 1
+
+===================
+- - Keep:
+- - TWO_CLUBS NINE_SPADES ACE_DIAMONDS 
+- -         H           H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 2
+
+===================
+- Keep:
+- TWO_CLUBS ACE_HEARTS 
+-         H          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 3
+
+===================
+- - Keep:
+- - TWO_CLUBS ACE_HEARTS ACE_DIAMONDS 
+- -         H          H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 2
+
+===================
+- Keep:
+- TWO_CLUBS ACE_DIAMONDS 
+-         H            H 
+- Consider:
+- 
+- 
+- Budget: 3
+
+===================
+Keep:
+THREE_CLUBS 
+          H 
+Consider:
+NINE_SPADES ACE_HEARTS ACE_DIAMONDS 
+          H          H            H 
+Budget: 4
+
+===================
+- Keep:
+- THREE_CLUBS NINE_SPADES 
+-           H           H 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 3
+
+===================
+- - Keep:
+- - THREE_CLUBS NINE_SPADES ACE_HEARTS 
+- -           H           H          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 2
+
+===================
+- - - Keep:
+- - - THREE_CLUBS NINE_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - -           H           H          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 1
+
+===================
+- - Keep:
+- - THREE_CLUBS NINE_SPADES ACE_DIAMONDS 
+- -           H           H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 2
+
+===================
+- Keep:
+- THREE_CLUBS ACE_HEARTS 
+-           H          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 3
+
+===================
+- - Keep:
+- - THREE_CLUBS ACE_HEARTS ACE_DIAMONDS 
+- -           H          H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 2
+
+===================
+- Keep:
+- THREE_CLUBS ACE_DIAMONDS 
+-           H            H 
+- Consider:
+- 
+- 
+- Budget: 3
+
+===================
+Keep:
+NINE_SPADES 
+          H 
+Consider:
+ACE_HEARTS ACE_DIAMONDS 
+         H            H 
+Budget: 4
+
+===================
+- Keep:
+- NINE_SPADES ACE_HEARTS 
+-           H          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 3
+
+===================
+- - Keep:
+- - NINE_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           H          H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 2
+
+===================
+- Keep:
+- NINE_SPADES ACE_DIAMONDS 
+-           H            H 
+- Consider:
+- 
+- 
+- Budget: 3
+
+===================
+Keep:
+ACE_HEARTS 
+         H 
+Consider:
+ACE_DIAMONDS 
+           H 
+Budget: 4
+
+===================
+- Keep:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Consider:
+- 
+- 
+- Budget: 3
+
+===================
+Keep:
+ACE_DIAMONDS 
+           H 
+Consider:
+
+
+Budget: 4
+
+===================
+Keep:
+
+
+Consider:
+TWO_CLUBS THREE_CLUBS NINE_SPADES QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+        H           H           H            D          H            H 
+Budget: 4
+
+===================
+Keep:
+TWO_CLUBS 
+        H 
+Consider:
+THREE_CLUBS NINE_SPADES QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+          H           H            D          H            H 
+Budget: 3
+
+===================
+- Keep:
+- TWO_CLUBS THREE_CLUBS 
+-         H           H 
+- Consider:
+- NINE_SPADES QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+-           H            D          H            H 
+- Budget: 2
+
+===================
+- - Keep:
+- - TWO_CLUBS THREE_CLUBS NINE_SPADES 
+- -         H           H           H 
+- - Consider:
+- - QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+- -            D          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS NINE_SPADES QUEEN_HEARTS 
+- - -         H           H           H            D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 1
+
+===================
+- - - - Keep:
+- - - - TWO_CLUBS THREE_CLUBS NINE_SPADES QUEEN_HEARTS ACE_HEARTS 
+- - - -         H           H           H            D          H 
+- - - - Consider:
+- - - - ACE_DIAMONDS 
+- - - -            H 
+- - - - Budget: 0
+
+>>> Hand: TWO_CLUBS THREE_CLUBS NINE_SPADES QUEEN_HEARTS ACE_HEARTS 
+        H           H           H            D          H 
+>>> highest-card  of 572560
+
+===================
+- - - - Keep:
+- - - - TWO_CLUBS THREE_CLUBS NINE_SPADES QUEEN_HEARTS ACE_DIAMONDS 
+- - - -         H           H           H            D            H 
+- - - - Consider:
+- - - - 
+- - - - 
+- - - - Budget: 0
+
+>>> Hand: TWO_CLUBS THREE_CLUBS NINE_SPADES QUEEN_HEARTS ACE_DIAMONDS 
+        H           H           H            D            H 
+>>> highest-card  of 572560
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS NINE_SPADES ACE_HEARTS 
+- - -         H           H           H          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS NINE_SPADES ACE_DIAMONDS 
+- - -         H           H           H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS THREE_CLUBS QUEEN_HEARTS 
+- -         H           H            D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 2
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS QUEEN_HEARTS ACE_HEARTS 
+- - -         H           H            D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 1
+
+===================
+- - - - Keep:
+- - - - TWO_CLUBS THREE_CLUBS QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+- - - -         H           H            D          H            H 
+- - - - Consider:
+- - - - 
+- - - - 
+- - - - Budget: 0
+
+>>> Hand: TWO_CLUBS THREE_CLUBS QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+        H           H            D          H            H 
+>>> one-pair of 1040812
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS QUEEN_HEARTS ACE_DIAMONDS 
+- - -         H           H            D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 1
+
+===================
+- - Keep:
+- - TWO_CLUBS THREE_CLUBS ACE_HEARTS 
+- -         H           H          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS ACE_HEARTS ACE_DIAMONDS 
+- - -         H           H          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS THREE_CLUBS ACE_DIAMONDS 
+- -         H           H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 1
+
+===================
+- Keep:
+- TWO_CLUBS NINE_SPADES 
+-         H           H 
+- Consider:
+- QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+-            D          H            H 
+- Budget: 2
+
+===================
+- - Keep:
+- - TWO_CLUBS NINE_SPADES QUEEN_HEARTS 
+- -         H           H            D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 2
+
+===================
+- - - Keep:
+- - - TWO_CLUBS NINE_SPADES QUEEN_HEARTS ACE_HEARTS 
+- - -         H           H            D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 1
+
+===================
+- - - - Keep:
+- - - - TWO_CLUBS NINE_SPADES QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+- - - -         H           H            D          H            H 
+- - - - Consider:
+- - - - 
+- - - - 
+- - - - Budget: 0
+
+>>> Hand: TWO_CLUBS NINE_SPADES QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+        H           H            D          H            H 
+>>> one-pair of 1040896
+
+===================
+- - - Keep:
+- - - TWO_CLUBS NINE_SPADES QUEEN_HEARTS ACE_DIAMONDS 
+- - -         H           H            D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 1
+
+===================
+- - Keep:
+- - TWO_CLUBS NINE_SPADES ACE_HEARTS 
+- -         H           H          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - TWO_CLUBS NINE_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - -         H           H          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS NINE_SPADES ACE_DIAMONDS 
+- -         H           H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 1
+
+===================
+- Keep:
+- TWO_CLUBS QUEEN_HEARTS 
+-         H            D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 3
+
+===================
+- - Keep:
+- - TWO_CLUBS QUEEN_HEARTS ACE_HEARTS 
+- -         H            D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 2
+
+===================
+- - - Keep:
+- - - TWO_CLUBS QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+- - -         H            D          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 1
+
+===================
+- - Keep:
+- - TWO_CLUBS QUEEN_HEARTS ACE_DIAMONDS 
+- -         H            D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 2
+
+===================
+- Keep:
+- TWO_CLUBS ACE_HEARTS 
+-         H          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 2
+
+===================
+- - Keep:
+- - TWO_CLUBS ACE_HEARTS ACE_DIAMONDS 
+- -         H          H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 1
+
+===================
+- Keep:
+- TWO_CLUBS ACE_DIAMONDS 
+-         H            H 
+- Consider:
+- 
+- 
+- Budget: 2
+
+===================
+Keep:
+THREE_CLUBS 
+          H 
+Consider:
+NINE_SPADES QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+          H            D          H            H 
+Budget: 3
+
+===================
+- Keep:
+- THREE_CLUBS NINE_SPADES 
+-           H           H 
+- Consider:
+- QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+-            D          H            H 
+- Budget: 2
+
+===================
+- - Keep:
+- - THREE_CLUBS NINE_SPADES QUEEN_HEARTS 
+- -           H           H            D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 2
+
+===================
+- - - Keep:
+- - - THREE_CLUBS NINE_SPADES QUEEN_HEARTS ACE_HEARTS 
+- - -           H           H            D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 1
+
+===================
+- - - - Keep:
+- - - - THREE_CLUBS NINE_SPADES QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+- - - -           H           H            D          H            H 
+- - - - Consider:
+- - - - 
+- - - - 
+- - - - Budget: 0
+
+>>> Hand: THREE_CLUBS NINE_SPADES QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+          H           H            D          H            H 
+>>> one-pair of 1040897
+
+===================
+- - - Keep:
+- - - THREE_CLUBS NINE_SPADES QUEEN_HEARTS ACE_DIAMONDS 
+- - -           H           H            D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 1
+
+===================
+- - Keep:
+- - THREE_CLUBS NINE_SPADES ACE_HEARTS 
+- -           H           H          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - THREE_CLUBS NINE_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - -           H           H          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS NINE_SPADES ACE_DIAMONDS 
+- -           H           H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 1
+
+===================
+- Keep:
+- THREE_CLUBS QUEEN_HEARTS 
+-           H            D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 3
+
+===================
+- - Keep:
+- - THREE_CLUBS QUEEN_HEARTS ACE_HEARTS 
+- -           H            D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 2
+
+===================
+- - - Keep:
+- - - THREE_CLUBS QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+- - -           H            D          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 1
+
+===================
+- - Keep:
+- - THREE_CLUBS QUEEN_HEARTS ACE_DIAMONDS 
+- -           H            D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 2
+
+===================
+- Keep:
+- THREE_CLUBS ACE_HEARTS 
+-           H          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 2
+
+===================
+- - Keep:
+- - THREE_CLUBS ACE_HEARTS ACE_DIAMONDS 
+- -           H          H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 1
+
+===================
+- Keep:
+- THREE_CLUBS ACE_DIAMONDS 
+-           H            H 
+- Consider:
+- 
+- 
+- Budget: 2
+
+===================
+Keep:
+NINE_SPADES 
+          H 
+Consider:
+QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+           D          H            H 
+Budget: 3
+
+===================
+- Keep:
+- NINE_SPADES QUEEN_HEARTS 
+-           H            D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 3
+
+===================
+- - Keep:
+- - NINE_SPADES QUEEN_HEARTS ACE_HEARTS 
+- -           H            D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 2
+
+===================
+- - - Keep:
+- - - NINE_SPADES QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+- - -           H            D          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 1
+
+===================
+- - Keep:
+- - NINE_SPADES QUEEN_HEARTS ACE_DIAMONDS 
+- -           H            D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 2
+
+===================
+- Keep:
+- NINE_SPADES ACE_HEARTS 
+-           H          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 2
+
+===================
+- - Keep:
+- - NINE_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           H          H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 1
+
+===================
+- Keep:
+- NINE_SPADES ACE_DIAMONDS 
+-           H            H 
+- Consider:
+- 
+- 
+- Budget: 2
+
+===================
+Keep:
+QUEEN_HEARTS 
+           D 
+Consider:
+ACE_HEARTS ACE_DIAMONDS 
+         H            H 
+Budget: 4
+
+===================
+- Keep:
+- QUEEN_HEARTS ACE_HEARTS 
+-            D          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 3
+
+===================
+- - Keep:
+- - QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+- -            D          H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 2
+
+===================
+- Keep:
+- QUEEN_HEARTS ACE_DIAMONDS 
+-            D            H 
+- Consider:
+- 
+- 
+- Budget: 3
+
+===================
+Keep:
+ACE_HEARTS 
+         H 
+Consider:
+ACE_DIAMONDS 
+           H 
+Budget: 3
+
+===================
+- Keep:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Consider:
+- 
+- 
+- Budget: 2
+
+===================
+Keep:
+ACE_DIAMONDS 
+           H 
+Consider:
+
+
+Budget: 3
+
+===================
+Keep:
+
+
+Consider:
+TWO_CLUBS THREE_CLUBS NINE_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+        H           H           H            D           D          H            H 
+Budget: 3
+
+===================
+Keep:
+TWO_CLUBS 
+        H 
+Consider:
+THREE_CLUBS NINE_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+          H           H            D           D          H            H 
+Budget: 2
+
+===================
+- Keep:
+- TWO_CLUBS THREE_CLUBS 
+-         H           H 
+- Consider:
+- NINE_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-           H            D           D          H            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - TWO_CLUBS THREE_CLUBS NINE_SPADES 
+- -         H           H           H 
+- - Consider:
+- - QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -            D           D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS NINE_SPADES QUEEN_HEARTS 
+- - -         H           H           H            D 
+- - - Consider:
+- - - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - -           D          H            H 
+- - - Budget: 0
+
+===================
+- - - - Keep:
+- - - - TWO_CLUBS THREE_CLUBS NINE_SPADES QUEEN_HEARTS KING_SPADES 
+- - - -         H           H           H            D           D 
+- - - - Consider:
+- - - - ACE_HEARTS ACE_DIAMONDS 
+- - - -          H            H 
+- - - - Budget: 0
+
+>>> Hand: TWO_CLUBS THREE_CLUBS NINE_SPADES QUEEN_HEARTS KING_SPADES 
+        H           H           H            D           D 
+>>> highest-card  of 534144
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS NINE_SPADES KING_SPADES 
+- - -         H           H           H           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS THREE_CLUBS QUEEN_HEARTS 
+- -         H           H            D 
+- - Consider:
+- - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS QUEEN_HEARTS KING_SPADES 
+- - -         H           H            D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 1
+
+===================
+- - - - Keep:
+- - - - TWO_CLUBS THREE_CLUBS QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- - - -         H           H            D           D          H 
+- - - - Consider:
+- - - - ACE_DIAMONDS 
+- - - -            H 
+- - - - Budget: 0
+
+>>> Hand: TWO_CLUBS THREE_CLUBS QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+        H           H            D           D          H 
+>>> highest-card  of 575892
+
+===================
+- - - - Keep:
+- - - - TWO_CLUBS THREE_CLUBS QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- - - -         H           H            D           D            H 
+- - - - Consider:
+- - - - 
+- - - - 
+- - - - Budget: 0
+
+>>> Hand: TWO_CLUBS THREE_CLUBS QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+        H           H            D           D            H 
+>>> highest-card  of 575892
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS QUEEN_HEARTS ACE_HEARTS 
+- - -         H           H            D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS QUEEN_HEARTS ACE_DIAMONDS 
+- - -         H           H            D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS THREE_CLUBS KING_SPADES 
+- -         H           H           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS KING_SPADES ACE_HEARTS 
+- - -         H           H           D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS KING_SPADES ACE_DIAMONDS 
+- - -         H           H           D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS THREE_CLUBS ACE_HEARTS 
+- -         H           H          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS THREE_CLUBS ACE_DIAMONDS 
+- -         H           H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- TWO_CLUBS NINE_SPADES 
+-         H           H 
+- Consider:
+- QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-            D           D          H            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - TWO_CLUBS NINE_SPADES QUEEN_HEARTS 
+- -         H           H            D 
+- - Consider:
+- - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - TWO_CLUBS NINE_SPADES QUEEN_HEARTS KING_SPADES 
+- - -         H           H            D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 1
+
+===================
+- - - - Keep:
+- - - - TWO_CLUBS NINE_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- - - -         H           H            D           D          H 
+- - - - Consider:
+- - - - ACE_DIAMONDS 
+- - - -            H 
+- - - - Budget: 0
+
+>>> Hand: TWO_CLUBS NINE_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+        H           H            D           D          H 
+>>> highest-card  of 575976
+
+===================
+- - - - Keep:
+- - - - TWO_CLUBS NINE_SPADES QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- - - -         H           H            D           D            H 
+- - - - Consider:
+- - - - 
+- - - - 
+- - - - Budget: 0
+
+>>> Hand: TWO_CLUBS NINE_SPADES QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+        H           H            D           D            H 
+>>> highest-card  of 575976
+
+===================
+- - - Keep:
+- - - TWO_CLUBS NINE_SPADES QUEEN_HEARTS ACE_HEARTS 
+- - -         H           H            D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - TWO_CLUBS NINE_SPADES QUEEN_HEARTS ACE_DIAMONDS 
+- - -         H           H            D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS NINE_SPADES KING_SPADES 
+- -         H           H           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - TWO_CLUBS NINE_SPADES KING_SPADES ACE_HEARTS 
+- - -         H           H           D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - TWO_CLUBS NINE_SPADES KING_SPADES ACE_DIAMONDS 
+- - -         H           H           D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS NINE_SPADES ACE_HEARTS 
+- -         H           H          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS NINE_SPADES ACE_DIAMONDS 
+- -         H           H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- TWO_CLUBS QUEEN_HEARTS 
+-         H            D 
+- Consider:
+- KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-           D          H            H 
+- Budget: 2
+
+===================
+- - Keep:
+- - TWO_CLUBS QUEEN_HEARTS KING_SPADES 
+- -         H            D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 2
+
+===================
+- - - Keep:
+- - - TWO_CLUBS QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- - -         H            D           D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 1
+
+===================
+- - - - Keep:
+- - - - TWO_CLUBS QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - - -         H            D           D          H            H 
+- - - - Consider:
+- - - - 
+- - - - 
+- - - - Budget: 0
+
+>>> Hand: TWO_CLUBS QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+        H            D           D          H            H 
+>>> one-pair of 1041134
+
+===================
+- - - Keep:
+- - - TWO_CLUBS QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- - -         H            D           D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 1
+
+===================
+- - Keep:
+- - TWO_CLUBS QUEEN_HEARTS ACE_HEARTS 
+- -         H            D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - TWO_CLUBS QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+- - -         H            D          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS QUEEN_HEARTS ACE_DIAMONDS 
+- -         H            D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 1
+
+===================
+- Keep:
+- TWO_CLUBS KING_SPADES 
+-         H           D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 2
+
+===================
+- - Keep:
+- - TWO_CLUBS KING_SPADES ACE_HEARTS 
+- -         H           D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - TWO_CLUBS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - -         H           D          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS KING_SPADES ACE_DIAMONDS 
+- -         H           D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 1
+
+===================
+- Keep:
+- TWO_CLUBS ACE_HEARTS 
+-         H          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - TWO_CLUBS ACE_HEARTS ACE_DIAMONDS 
+- -         H          H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- TWO_CLUBS ACE_DIAMONDS 
+-         H            H 
+- Consider:
+- 
+- 
+- Budget: 1
+
+===================
+Keep:
+THREE_CLUBS 
+          H 
+Consider:
+NINE_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+          H            D           D          H            H 
+Budget: 2
+
+===================
+- Keep:
+- THREE_CLUBS NINE_SPADES 
+-           H           H 
+- Consider:
+- QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-            D           D          H            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - THREE_CLUBS NINE_SPADES QUEEN_HEARTS 
+- -           H           H            D 
+- - Consider:
+- - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - THREE_CLUBS NINE_SPADES QUEEN_HEARTS KING_SPADES 
+- - -           H           H            D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 1
+
+===================
+- - - - Keep:
+- - - - THREE_CLUBS NINE_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- - - -           H           H            D           D          H 
+- - - - Consider:
+- - - - ACE_DIAMONDS 
+- - - -            H 
+- - - - Budget: 0
+
+>>> Hand: THREE_CLUBS NINE_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+          H           H            D           D          H 
+>>> highest-card  of 575977
+
+===================
+- - - - Keep:
+- - - - THREE_CLUBS NINE_SPADES QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- - - -           H           H            D           D            H 
+- - - - Consider:
+- - - - 
+- - - - 
+- - - - Budget: 0
+
+>>> Hand: THREE_CLUBS NINE_SPADES QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+          H           H            D           D            H 
+>>> highest-card  of 575977
+
+===================
+- - - Keep:
+- - - THREE_CLUBS NINE_SPADES QUEEN_HEARTS ACE_HEARTS 
+- - -           H           H            D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - THREE_CLUBS NINE_SPADES QUEEN_HEARTS ACE_DIAMONDS 
+- - -           H           H            D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS NINE_SPADES KING_SPADES 
+- -           H           H           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - THREE_CLUBS NINE_SPADES KING_SPADES ACE_HEARTS 
+- - -           H           H           D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - THREE_CLUBS NINE_SPADES KING_SPADES ACE_DIAMONDS 
+- - -           H           H           D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS NINE_SPADES ACE_HEARTS 
+- -           H           H          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS NINE_SPADES ACE_DIAMONDS 
+- -           H           H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- THREE_CLUBS QUEEN_HEARTS 
+-           H            D 
+- Consider:
+- KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-           D          H            H 
+- Budget: 2
+
+===================
+- - Keep:
+- - THREE_CLUBS QUEEN_HEARTS KING_SPADES 
+- -           H            D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 2
+
+===================
+- - - Keep:
+- - - THREE_CLUBS QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- - -           H            D           D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 1
+
+===================
+- - - - Keep:
+- - - - THREE_CLUBS QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - - -           H            D           D          H            H 
+- - - - Consider:
+- - - - 
+- - - - 
+- - - - Budget: 0
+
+>>> Hand: THREE_CLUBS QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+          H            D           D          H            H 
+>>> one-pair of 1041135
+
+===================
+- - - Keep:
+- - - THREE_CLUBS QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- - -           H            D           D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 1
+
+===================
+- - Keep:
+- - THREE_CLUBS QUEEN_HEARTS ACE_HEARTS 
+- -           H            D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - THREE_CLUBS QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+- - -           H            D          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS QUEEN_HEARTS ACE_DIAMONDS 
+- -           H            D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 1
+
+===================
+- Keep:
+- THREE_CLUBS KING_SPADES 
+-           H           D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 2
+
+===================
+- - Keep:
+- - THREE_CLUBS KING_SPADES ACE_HEARTS 
+- -           H           D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - THREE_CLUBS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - -           H           D          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS KING_SPADES ACE_DIAMONDS 
+- -           H           D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 1
+
+===================
+- Keep:
+- THREE_CLUBS ACE_HEARTS 
+-           H          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - THREE_CLUBS ACE_HEARTS ACE_DIAMONDS 
+- -           H          H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- THREE_CLUBS ACE_DIAMONDS 
+-           H            H 
+- Consider:
+- 
+- 
+- Budget: 1
+
+===================
+Keep:
+NINE_SPADES 
+          H 
+Consider:
+QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+           D           D          H            H 
+Budget: 2
+
+===================
+- Keep:
+- NINE_SPADES QUEEN_HEARTS 
+-           H            D 
+- Consider:
+- KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-           D          H            H 
+- Budget: 2
+
+===================
+- - Keep:
+- - NINE_SPADES QUEEN_HEARTS KING_SPADES 
+- -           H            D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 2
+
+===================
+- - - Keep:
+- - - NINE_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- - -           H            D           D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 1
+
+===================
+- - - - Keep:
+- - - - NINE_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - - -           H            D           D          H            H 
+- - - - Consider:
+- - - - 
+- - - - 
+- - - - Budget: 0
+
+>>> Hand: NINE_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+          H            D           D          H            H 
+>>> one-pair of 1041141
+
+===================
+- - - Keep:
+- - - NINE_SPADES QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- - -           H            D           D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 1
+
+===================
+- - Keep:
+- - NINE_SPADES QUEEN_HEARTS ACE_HEARTS 
+- -           H            D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - NINE_SPADES QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+- - -           H            D          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - NINE_SPADES QUEEN_HEARTS ACE_DIAMONDS 
+- -           H            D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 1
+
+===================
+- Keep:
+- NINE_SPADES KING_SPADES 
+-           H           D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 2
+
+===================
+- - Keep:
+- - NINE_SPADES KING_SPADES ACE_HEARTS 
+- -           H           D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - NINE_SPADES KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - -           H           D          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - NINE_SPADES KING_SPADES ACE_DIAMONDS 
+- -           H           D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 1
+
+===================
+- Keep:
+- NINE_SPADES ACE_HEARTS 
+-           H          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - NINE_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           H          H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- NINE_SPADES ACE_DIAMONDS 
+-           H            H 
+- Consider:
+- 
+- 
+- Budget: 1
+
+===================
+Keep:
+QUEEN_HEARTS 
+           D 
+Consider:
+KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+          D          H            H 
+Budget: 3
+
+===================
+- Keep:
+- QUEEN_HEARTS KING_SPADES 
+-            D           D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 3
+
+===================
+- - Keep:
+- - QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- -            D           D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 2
+
+===================
+- - - Keep:
+- - - QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - -            D           D          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 1
+
+===================
+- - Keep:
+- - QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- -            D           D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 2
+
+===================
+- Keep:
+- QUEEN_HEARTS ACE_HEARTS 
+-            D          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 2
+
+===================
+- - Keep:
+- - QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+- -            D          H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 1
+
+===================
+- Keep:
+- QUEEN_HEARTS ACE_DIAMONDS 
+-            D            H 
+- Consider:
+- 
+- 
+- Budget: 2
+
+===================
+Keep:
+KING_SPADES 
+          D 
+Consider:
+ACE_HEARTS ACE_DIAMONDS 
+         H            H 
+Budget: 3
+
+===================
+- Keep:
+- KING_SPADES ACE_HEARTS 
+-           D          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 2
+
+===================
+- - Keep:
+- - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 1
+
+===================
+- Keep:
+- KING_SPADES ACE_DIAMONDS 
+-           D            H 
+- Consider:
+- 
+- 
+- Budget: 2
+
+===================
+Keep:
+ACE_HEARTS 
+         H 
+Consider:
+ACE_DIAMONDS 
+           H 
+Budget: 2
+
+===================
+- Keep:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Consider:
+- 
+- 
+- Budget: 1
+
+===================
+Keep:
+ACE_DIAMONDS 
+           H 
+Consider:
+
+
+Budget: 2
+
+===================
+Keep:
+
+
+Consider:
+TWO_CLUBS THREE_CLUBS NINE_SPADES JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+        H           H           H           D            D           D          H            H 
+Budget: 2
+
+===================
+Keep:
+TWO_CLUBS 
+        H 
+Consider:
+THREE_CLUBS NINE_SPADES JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+          H           H           D            D           D          H            H 
+Budget: 1
+
+===================
+- Keep:
+- TWO_CLUBS THREE_CLUBS 
+-         H           H 
+- Consider:
+- NINE_SPADES JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-           H           D            D           D          H            H 
+- Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS THREE_CLUBS JACK_SPADES 
+- -         H           H           D 
+- - Consider:
+- - QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -            D           D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS JACK_SPADES QUEEN_HEARTS 
+- - -         H           H           D            D 
+- - - Consider:
+- - - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - -           D          H            H 
+- - - Budget: 0
+
+===================
+- - - - Keep:
+- - - - TWO_CLUBS THREE_CLUBS JACK_SPADES QUEEN_HEARTS KING_SPADES 
+- - - -         H           H           D            D           D 
+- - - - Consider:
+- - - - ACE_HEARTS ACE_DIAMONDS 
+- - - -          H            H 
+- - - - Budget: 0
+
+>>> Hand: TWO_CLUBS THREE_CLUBS JACK_SPADES QUEEN_HEARTS KING_SPADES 
+        H           H           D            D           D 
+>>> highest-card  of 534536
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS JACK_SPADES KING_SPADES 
+- - -         H           H           D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS THREE_CLUBS QUEEN_HEARTS 
+- -         H           H            D 
+- - Consider:
+- - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - TWO_CLUBS THREE_CLUBS QUEEN_HEARTS KING_SPADES 
+- - -         H           H            D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS THREE_CLUBS KING_SPADES 
+- -         H           H           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 0
+
+===================
+- Keep:
+- TWO_CLUBS NINE_SPADES 
+-         H           H 
+- Consider:
+- JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-           D            D           D          H            H 
+- Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS NINE_SPADES JACK_SPADES 
+- -         H           H           D 
+- - Consider:
+- - QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -            D           D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - TWO_CLUBS NINE_SPADES JACK_SPADES QUEEN_HEARTS 
+- - -         H           H           D            D 
+- - - Consider:
+- - - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - -           D          H            H 
+- - - Budget: 0
+
+===================
+- - - - Keep:
+- - - - TWO_CLUBS NINE_SPADES JACK_SPADES QUEEN_HEARTS KING_SPADES 
+- - - -         H           H           D            D           D 
+- - - - Consider:
+- - - - ACE_HEARTS ACE_DIAMONDS 
+- - - -          H            H 
+- - - - Budget: 0
+
+>>> Hand: TWO_CLUBS NINE_SPADES JACK_SPADES QUEEN_HEARTS KING_SPADES 
+        H           H           D            D           D 
+>>> highest-card  of 534620
+
+===================
+- - - Keep:
+- - - TWO_CLUBS NINE_SPADES JACK_SPADES KING_SPADES 
+- - -         H           H           D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS NINE_SPADES QUEEN_HEARTS 
+- -         H           H            D 
+- - Consider:
+- - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - TWO_CLUBS NINE_SPADES QUEEN_HEARTS KING_SPADES 
+- - -         H           H            D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS NINE_SPADES KING_SPADES 
+- -         H           H           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 0
+
+===================
+- Keep:
+- TWO_CLUBS JACK_SPADES 
+-         H           D 
+- Consider:
+- QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-            D           D          H            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - TWO_CLUBS JACK_SPADES QUEEN_HEARTS 
+- -         H           D            D 
+- - Consider:
+- - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - TWO_CLUBS JACK_SPADES QUEEN_HEARTS KING_SPADES 
+- - -         H           D            D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 1
+
+===================
+- - - - Keep:
+- - - - TWO_CLUBS JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- - - -         H           D            D           D          H 
+- - - - Consider:
+- - - - ACE_DIAMONDS 
+- - - -            H 
+- - - - Budget: 0
+
+>>> Hand: TWO_CLUBS JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+        H           D            D           D          H 
+>>> highest-card  of 576004
+
+===================
+- - - - Keep:
+- - - - TWO_CLUBS JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- - - -         H           D            D           D            H 
+- - - - Consider:
+- - - - 
+- - - - 
+- - - - Budget: 0
+
+>>> Hand: TWO_CLUBS JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+        H           D            D           D            H 
+>>> highest-card  of 576004
+
+===================
+- - - Keep:
+- - - TWO_CLUBS JACK_SPADES QUEEN_HEARTS ACE_HEARTS 
+- - -         H           D            D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - TWO_CLUBS JACK_SPADES QUEEN_HEARTS ACE_DIAMONDS 
+- - -         H           D            D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS JACK_SPADES KING_SPADES 
+- -         H           D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - TWO_CLUBS JACK_SPADES KING_SPADES ACE_HEARTS 
+- - -         H           D           D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - TWO_CLUBS JACK_SPADES KING_SPADES ACE_DIAMONDS 
+- - -         H           D           D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS JACK_SPADES ACE_HEARTS 
+- -         H           D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS JACK_SPADES ACE_DIAMONDS 
+- -         H           D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- TWO_CLUBS QUEEN_HEARTS 
+-         H            D 
+- Consider:
+- KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-           D          H            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - TWO_CLUBS QUEEN_HEARTS KING_SPADES 
+- -         H            D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - TWO_CLUBS QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- - -         H            D           D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - TWO_CLUBS QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- - -         H            D           D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS QUEEN_HEARTS ACE_HEARTS 
+- -         H            D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS QUEEN_HEARTS ACE_DIAMONDS 
+- -         H            D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- TWO_CLUBS KING_SPADES 
+-         H           D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - TWO_CLUBS KING_SPADES ACE_HEARTS 
+- -         H           D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS KING_SPADES ACE_DIAMONDS 
+- -         H           D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- TWO_CLUBS ACE_HEARTS 
+-         H          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 0
+
+===================
+- Keep:
+- TWO_CLUBS ACE_DIAMONDS 
+-         H            H 
+- Consider:
+- 
+- 
+- Budget: 0
+
+===================
+Keep:
+THREE_CLUBS 
+          H 
+Consider:
+NINE_SPADES JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+          H           D            D           D          H            H 
+Budget: 1
+
+===================
+- Keep:
+- THREE_CLUBS NINE_SPADES 
+-           H           H 
+- Consider:
+- JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-           D            D           D          H            H 
+- Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS NINE_SPADES JACK_SPADES 
+- -           H           H           D 
+- - Consider:
+- - QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -            D           D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - THREE_CLUBS NINE_SPADES JACK_SPADES QUEEN_HEARTS 
+- - -           H           H           D            D 
+- - - Consider:
+- - - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - -           D          H            H 
+- - - Budget: 0
+
+===================
+- - - - Keep:
+- - - - THREE_CLUBS NINE_SPADES JACK_SPADES QUEEN_HEARTS KING_SPADES 
+- - - -           H           H           D            D           D 
+- - - - Consider:
+- - - - ACE_HEARTS ACE_DIAMONDS 
+- - - -          H            H 
+- - - - Budget: 0
+
+>>> Hand: THREE_CLUBS NINE_SPADES JACK_SPADES QUEEN_HEARTS KING_SPADES 
+          H           H           D            D           D 
+>>> highest-card  of 534621
+
+===================
+- - - Keep:
+- - - THREE_CLUBS NINE_SPADES JACK_SPADES KING_SPADES 
+- - -           H           H           D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS NINE_SPADES QUEEN_HEARTS 
+- -           H           H            D 
+- - Consider:
+- - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - THREE_CLUBS NINE_SPADES QUEEN_HEARTS KING_SPADES 
+- - -           H           H            D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS NINE_SPADES KING_SPADES 
+- -           H           H           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 0
+
+===================
+- Keep:
+- THREE_CLUBS JACK_SPADES 
+-           H           D 
+- Consider:
+- QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-            D           D          H            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - THREE_CLUBS JACK_SPADES QUEEN_HEARTS 
+- -           H           D            D 
+- - Consider:
+- - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - THREE_CLUBS JACK_SPADES QUEEN_HEARTS KING_SPADES 
+- - -           H           D            D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 1
+
+===================
+- - - - Keep:
+- - - - THREE_CLUBS JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- - - -           H           D            D           D          H 
+- - - - Consider:
+- - - - ACE_DIAMONDS 
+- - - -            H 
+- - - - Budget: 0
+
+>>> Hand: THREE_CLUBS JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+          H           D            D           D          H 
+>>> highest-card  of 576005
+
+===================
+- - - - Keep:
+- - - - THREE_CLUBS JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- - - -           H           D            D           D            H 
+- - - - Consider:
+- - - - 
+- - - - 
+- - - - Budget: 0
+
+>>> Hand: THREE_CLUBS JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+          H           D            D           D            H 
+>>> highest-card  of 576005
+
+===================
+- - - Keep:
+- - - THREE_CLUBS JACK_SPADES QUEEN_HEARTS ACE_HEARTS 
+- - -           H           D            D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - THREE_CLUBS JACK_SPADES QUEEN_HEARTS ACE_DIAMONDS 
+- - -           H           D            D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS JACK_SPADES KING_SPADES 
+- -           H           D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - THREE_CLUBS JACK_SPADES KING_SPADES ACE_HEARTS 
+- - -           H           D           D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - THREE_CLUBS JACK_SPADES KING_SPADES ACE_DIAMONDS 
+- - -           H           D           D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS JACK_SPADES ACE_HEARTS 
+- -           H           D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS JACK_SPADES ACE_DIAMONDS 
+- -           H           D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- THREE_CLUBS QUEEN_HEARTS 
+-           H            D 
+- Consider:
+- KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-           D          H            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - THREE_CLUBS QUEEN_HEARTS KING_SPADES 
+- -           H            D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - THREE_CLUBS QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- - -           H            D           D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - THREE_CLUBS QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- - -           H            D           D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS QUEEN_HEARTS ACE_HEARTS 
+- -           H            D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS QUEEN_HEARTS ACE_DIAMONDS 
+- -           H            D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- THREE_CLUBS KING_SPADES 
+-           H           D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - THREE_CLUBS KING_SPADES ACE_HEARTS 
+- -           H           D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS KING_SPADES ACE_DIAMONDS 
+- -           H           D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- THREE_CLUBS ACE_HEARTS 
+-           H          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 0
+
+===================
+- Keep:
+- THREE_CLUBS ACE_DIAMONDS 
+-           H            H 
+- Consider:
+- 
+- 
+- Budget: 0
+
+===================
+Keep:
+NINE_SPADES 
+          H 
+Consider:
+JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+          D            D           D          H            H 
+Budget: 1
+
+===================
+- Keep:
+- NINE_SPADES JACK_SPADES 
+-           H           D 
+- Consider:
+- QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-            D           D          H            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - NINE_SPADES JACK_SPADES QUEEN_HEARTS 
+- -           H           D            D 
+- - Consider:
+- - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - NINE_SPADES JACK_SPADES QUEEN_HEARTS KING_SPADES 
+- - -           H           D            D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 1
+
+===================
+- - - - Keep:
+- - - - NINE_SPADES JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- - - -           H           D            D           D          H 
+- - - - Consider:
+- - - - ACE_DIAMONDS 
+- - - -            H 
+- - - - Budget: 0
+
+>>> Hand: NINE_SPADES JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+          H           D            D           D          H 
+>>> highest-card  of 576011
+
+===================
+- - - - Keep:
+- - - - NINE_SPADES JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- - - -           H           D            D           D            H 
+- - - - Consider:
+- - - - 
+- - - - 
+- - - - Budget: 0
+
+>>> Hand: NINE_SPADES JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+          H           D            D           D            H 
+>>> highest-card  of 576011
+
+===================
+- - - Keep:
+- - - NINE_SPADES JACK_SPADES QUEEN_HEARTS ACE_HEARTS 
+- - -           H           D            D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - NINE_SPADES JACK_SPADES QUEEN_HEARTS ACE_DIAMONDS 
+- - -           H           D            D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - NINE_SPADES JACK_SPADES KING_SPADES 
+- -           H           D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - NINE_SPADES JACK_SPADES KING_SPADES ACE_HEARTS 
+- - -           H           D           D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - NINE_SPADES JACK_SPADES KING_SPADES ACE_DIAMONDS 
+- - -           H           D           D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - NINE_SPADES JACK_SPADES ACE_HEARTS 
+- -           H           D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 0
+
+===================
+- - Keep:
+- - NINE_SPADES JACK_SPADES ACE_DIAMONDS 
+- -           H           D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- NINE_SPADES QUEEN_HEARTS 
+-           H            D 
+- Consider:
+- KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-           D          H            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - NINE_SPADES QUEEN_HEARTS KING_SPADES 
+- -           H            D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - NINE_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- - -           H            D           D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - NINE_SPADES QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- - -           H            D           D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - NINE_SPADES QUEEN_HEARTS ACE_HEARTS 
+- -           H            D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 0
+
+===================
+- - Keep:
+- - NINE_SPADES QUEEN_HEARTS ACE_DIAMONDS 
+- -           H            D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- NINE_SPADES KING_SPADES 
+-           H           D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - NINE_SPADES KING_SPADES ACE_HEARTS 
+- -           H           D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 0
+
+===================
+- - Keep:
+- - NINE_SPADES KING_SPADES ACE_DIAMONDS 
+- -           H           D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- NINE_SPADES ACE_HEARTS 
+-           H          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 0
+
+===================
+- Keep:
+- NINE_SPADES ACE_DIAMONDS 
+-           H            H 
+- Consider:
+- 
+- 
+- Budget: 0
+
+===================
+Keep:
+JACK_SPADES 
+          D 
+Consider:
+QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+           D           D          H            H 
+Budget: 2
+
+===================
+- Keep:
+- JACK_SPADES QUEEN_HEARTS 
+-           D            D 
+- Consider:
+- KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-           D          H            H 
+- Budget: 2
+
+===================
+- - Keep:
+- - JACK_SPADES QUEEN_HEARTS KING_SPADES 
+- -           D            D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 2
+
+===================
+- - - Keep:
+- - - JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- - -           D            D           D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 1
+
+===================
+- - - - Keep:
+- - - - JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - - -           D            D           D          H            H 
+- - - - Consider:
+- - - - 
+- - - - 
+- - - - Budget: 0
+
+>>> Hand: JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+          D            D           D          H            H 
+>>> one-pair of 1041143
+
+===================
+- - - Keep:
+- - - JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- - -           D            D           D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 1
+
+===================
+- - Keep:
+- - JACK_SPADES QUEEN_HEARTS ACE_HEARTS 
+- -           D            D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - JACK_SPADES QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+- - -           D            D          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - JACK_SPADES QUEEN_HEARTS ACE_DIAMONDS 
+- -           D            D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 1
+
+===================
+- Keep:
+- JACK_SPADES KING_SPADES 
+-           D           D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 2
+
+===================
+- - Keep:
+- - JACK_SPADES KING_SPADES ACE_HEARTS 
+- -           D           D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - JACK_SPADES KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - -           D           D          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - JACK_SPADES KING_SPADES ACE_DIAMONDS 
+- -           D           D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 1
+
+===================
+- Keep:
+- JACK_SPADES ACE_HEARTS 
+-           D          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - JACK_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- JACK_SPADES ACE_DIAMONDS 
+-           D            H 
+- Consider:
+- 
+- 
+- Budget: 1
+
+===================
+Keep:
+QUEEN_HEARTS 
+           D 
+Consider:
+KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+          D          H            H 
+Budget: 2
+
+===================
+- Keep:
+- QUEEN_HEARTS KING_SPADES 
+-            D           D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 2
+
+===================
+- - Keep:
+- - QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- -            D           D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - -            D           D          H            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- -            D           D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 1
+
+===================
+- Keep:
+- QUEEN_HEARTS ACE_HEARTS 
+-            D          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - QUEEN_HEARTS ACE_HEARTS ACE_DIAMONDS 
+- -            D          H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- QUEEN_HEARTS ACE_DIAMONDS 
+-            D            H 
+- Consider:
+- 
+- 
+- Budget: 1
+
+===================
+Keep:
+KING_SPADES 
+          D 
+Consider:
+ACE_HEARTS ACE_DIAMONDS 
+         H            H 
+Budget: 2
+
+===================
+- Keep:
+- KING_SPADES ACE_HEARTS 
+-           D          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- KING_SPADES ACE_DIAMONDS 
+-           D            H 
+- Consider:
+- 
+- 
+- Budget: 1
+
+===================
+Keep:
+ACE_HEARTS 
+         H 
+Consider:
+ACE_DIAMONDS 
+           H 
+Budget: 1
+
+===================
+- Keep:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Consider:
+- 
+- 
+- Budget: 0
+
+===================
+Keep:
+ACE_DIAMONDS 
+           H 
+Consider:
+
+
+Budget: 1
+
+===================
+Keep:
+
+
+Consider:
+TWO_CLUBS THREE_CLUBS NINE_SPADES JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+        H           H           H           D             D            D           D          H            H 
+Budget: 1
+
+===================
+Keep:
+TWO_CLUBS 
+        H 
+Consider:
+THREE_CLUBS NINE_SPADES JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+          H           H           D             D            D           D          H            H 
+Budget: 0
+
+===================
+- Keep:
+- TWO_CLUBS JACK_SPADES 
+-         H           D 
+- Consider:
+- JACK_DIAMONDS QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-             D            D           D          H            H 
+- Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS JACK_SPADES JACK_DIAMONDS 
+- -         H           D             D 
+- - Consider:
+- - QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -            D           D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - TWO_CLUBS JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS 
+- - -         H           D             D            D 
+- - - Consider:
+- - - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - -           D          H            H 
+- - - Budget: 0
+
+===================
+- - - - Keep:
+- - - - TWO_CLUBS JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES 
+- - - -         H           D             D            D           D 
+- - - - Consider:
+- - - - ACE_HEARTS ACE_DIAMONDS 
+- - - -          H            H 
+- - - - Budget: 0
+
+>>> Hand: TWO_CLUBS JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES 
+        H           D             D            D           D 
+>>> one-pair of 1032902
+
+===================
+- - - Keep:
+- - - TWO_CLUBS JACK_SPADES JACK_DIAMONDS KING_SPADES 
+- - -         H           D             D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS JACK_SPADES QUEEN_HEARTS 
+- -         H           D            D 
+- - Consider:
+- - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - TWO_CLUBS JACK_SPADES QUEEN_HEARTS KING_SPADES 
+- - -         H           D            D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS JACK_SPADES KING_SPADES 
+- -         H           D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 0
+
+===================
+- Keep:
+- TWO_CLUBS JACK_DIAMONDS 
+-         H             D 
+- Consider:
+- QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-            D           D          H            H 
+- Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS JACK_DIAMONDS QUEEN_HEARTS 
+- -         H             D            D 
+- - Consider:
+- - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - TWO_CLUBS JACK_DIAMONDS QUEEN_HEARTS KING_SPADES 
+- - -         H             D            D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS JACK_DIAMONDS KING_SPADES 
+- -         H             D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 0
+
+===================
+- Keep:
+- TWO_CLUBS QUEEN_HEARTS 
+-         H            D 
+- Consider:
+- KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-           D          H            H 
+- Budget: 0
+
+===================
+- - Keep:
+- - TWO_CLUBS QUEEN_HEARTS KING_SPADES 
+- -         H            D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 0
+
+===================
+- Keep:
+- TWO_CLUBS KING_SPADES 
+-         H           D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 0
+
+===================
+Keep:
+THREE_CLUBS 
+          H 
+Consider:
+NINE_SPADES JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+          H           D             D            D           D          H            H 
+Budget: 0
+
+===================
+- Keep:
+- THREE_CLUBS JACK_SPADES 
+-           H           D 
+- Consider:
+- JACK_DIAMONDS QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-             D            D           D          H            H 
+- Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS JACK_SPADES JACK_DIAMONDS 
+- -           H           D             D 
+- - Consider:
+- - QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -            D           D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - THREE_CLUBS JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS 
+- - -           H           D             D            D 
+- - - Consider:
+- - - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - -           D          H            H 
+- - - Budget: 0
+
+===================
+- - - - Keep:
+- - - - THREE_CLUBS JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES 
+- - - -           H           D             D            D           D 
+- - - - Consider:
+- - - - ACE_HEARTS ACE_DIAMONDS 
+- - - -          H            H 
+- - - - Budget: 0
+
+>>> Hand: THREE_CLUBS JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES 
+          H           D             D            D           D 
+>>> one-pair of 1032903
+
+===================
+- - - Keep:
+- - - THREE_CLUBS JACK_SPADES JACK_DIAMONDS KING_SPADES 
+- - -           H           D             D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS JACK_SPADES QUEEN_HEARTS 
+- -           H           D            D 
+- - Consider:
+- - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - THREE_CLUBS JACK_SPADES QUEEN_HEARTS KING_SPADES 
+- - -           H           D            D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS JACK_SPADES KING_SPADES 
+- -           H           D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 0
+
+===================
+- Keep:
+- THREE_CLUBS JACK_DIAMONDS 
+-           H             D 
+- Consider:
+- QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-            D           D          H            H 
+- Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS JACK_DIAMONDS QUEEN_HEARTS 
+- -           H             D            D 
+- - Consider:
+- - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - THREE_CLUBS JACK_DIAMONDS QUEEN_HEARTS KING_SPADES 
+- - -           H             D            D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS JACK_DIAMONDS KING_SPADES 
+- -           H             D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 0
+
+===================
+- Keep:
+- THREE_CLUBS QUEEN_HEARTS 
+-           H            D 
+- Consider:
+- KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-           D          H            H 
+- Budget: 0
+
+===================
+- - Keep:
+- - THREE_CLUBS QUEEN_HEARTS KING_SPADES 
+- -           H            D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 0
+
+===================
+- Keep:
+- THREE_CLUBS KING_SPADES 
+-           H           D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 0
+
+===================
+Keep:
+NINE_SPADES 
+          H 
+Consider:
+JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+          D             D            D           D          H            H 
+Budget: 0
+
+===================
+- Keep:
+- NINE_SPADES JACK_SPADES 
+-           H           D 
+- Consider:
+- JACK_DIAMONDS QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-             D            D           D          H            H 
+- Budget: 0
+
+===================
+- - Keep:
+- - NINE_SPADES JACK_SPADES JACK_DIAMONDS 
+- -           H           D             D 
+- - Consider:
+- - QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -            D           D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - NINE_SPADES JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS 
+- - -           H           D             D            D 
+- - - Consider:
+- - - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- - -           D          H            H 
+- - - Budget: 0
+
+===================
+- - - - Keep:
+- - - - NINE_SPADES JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES 
+- - - -           H           D             D            D           D 
+- - - - Consider:
+- - - - ACE_HEARTS ACE_DIAMONDS 
+- - - -          H            H 
+- - - - Budget: 0
+
+>>> Hand: NINE_SPADES JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES 
+          H           D             D            D           D 
+>>> straight of 4534655
+
+===================
+- - - Keep:
+- - - NINE_SPADES JACK_SPADES JACK_DIAMONDS KING_SPADES 
+- - -           H           D             D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - NINE_SPADES JACK_SPADES QUEEN_HEARTS 
+- -           H           D            D 
+- - Consider:
+- - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - NINE_SPADES JACK_SPADES QUEEN_HEARTS KING_SPADES 
+- - -           H           D            D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - NINE_SPADES JACK_SPADES KING_SPADES 
+- -           H           D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 0
+
+===================
+- Keep:
+- NINE_SPADES JACK_DIAMONDS 
+-           H             D 
+- Consider:
+- QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-            D           D          H            H 
+- Budget: 0
+
+===================
+- - Keep:
+- - NINE_SPADES JACK_DIAMONDS QUEEN_HEARTS 
+- -           H             D            D 
+- - Consider:
+- - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - NINE_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES 
+- - -           H             D            D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - NINE_SPADES JACK_DIAMONDS KING_SPADES 
+- -           H             D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 0
+
+===================
+- Keep:
+- NINE_SPADES QUEEN_HEARTS 
+-           H            D 
+- Consider:
+- KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-           D          H            H 
+- Budget: 0
+
+===================
+- - Keep:
+- - NINE_SPADES QUEEN_HEARTS KING_SPADES 
+- -           H            D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 0
+
+===================
+- Keep:
+- NINE_SPADES KING_SPADES 
+-           H           D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 0
+
+===================
+Keep:
+JACK_SPADES 
+          D 
+Consider:
+JACK_DIAMONDS QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+            D            D           D          H            H 
+Budget: 1
+
+===================
+- Keep:
+- JACK_SPADES JACK_DIAMONDS 
+-           D             D 
+- Consider:
+- QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-            D           D          H            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS 
+- -           D             D            D 
+- - Consider:
+- - KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+- -           D          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES 
+- - -           D             D            D           D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 1
+
+===================
+- - - - Keep:
+- - - - JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- - - -           D             D            D           D          H 
+- - - - Consider:
+- - - - ACE_DIAMONDS 
+- - - -            H 
+- - - - Budget: 0
+
+>>> Hand: JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+          D             D            D           D          H 
+>>> one-pair of 1033122
+
+===================
+- - - - Keep:
+- - - - JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- - - -           D             D            D           D            H 
+- - - - Consider:
+- - - - 
+- - - - 
+- - - - Budget: 0
+
+>>> Hand: JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+          D             D            D           D            H 
+>>> one-pair of 1033122
+
+===================
+- - - Keep:
+- - - JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS ACE_HEARTS 
+- - -           D             D            D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS ACE_DIAMONDS 
+- - -           D             D            D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - JACK_SPADES JACK_DIAMONDS KING_SPADES 
+- -           D             D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - JACK_SPADES JACK_DIAMONDS KING_SPADES ACE_HEARTS 
+- - -           D             D           D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - JACK_SPADES JACK_DIAMONDS KING_SPADES ACE_DIAMONDS 
+- - -           D             D           D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - JACK_SPADES JACK_DIAMONDS ACE_HEARTS 
+- -           D             D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 0
+
+===================
+- - Keep:
+- - JACK_SPADES JACK_DIAMONDS ACE_DIAMONDS 
+- -           D             D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- JACK_SPADES QUEEN_HEARTS 
+-           D            D 
+- Consider:
+- KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-           D          H            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - JACK_SPADES QUEEN_HEARTS KING_SPADES 
+- -           D            D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- - -           D            D           D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - JACK_SPADES QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- - -           D            D           D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - JACK_SPADES QUEEN_HEARTS ACE_HEARTS 
+- -           D            D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 0
+
+===================
+- - Keep:
+- - JACK_SPADES QUEEN_HEARTS ACE_DIAMONDS 
+- -           D            D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- JACK_SPADES KING_SPADES 
+-           D           D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - JACK_SPADES KING_SPADES ACE_HEARTS 
+- -           D           D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 0
+
+===================
+- - Keep:
+- - JACK_SPADES KING_SPADES ACE_DIAMONDS 
+- -           D           D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- JACK_SPADES ACE_HEARTS 
+-           D          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 0
+
+===================
+- Keep:
+- JACK_SPADES ACE_DIAMONDS 
+-           D            H 
+- Consider:
+- 
+- 
+- Budget: 0
+
+===================
+Keep:
+JACK_DIAMONDS 
+            D 
+Consider:
+QUEEN_HEARTS KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+           D           D          H            H 
+Budget: 1
+
+===================
+- Keep:
+- JACK_DIAMONDS QUEEN_HEARTS 
+-             D            D 
+- Consider:
+- KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+-           D          H            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - JACK_DIAMONDS QUEEN_HEARTS KING_SPADES 
+- -             D            D           D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 1
+
+===================
+- - - Keep:
+- - - JACK_DIAMONDS QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- - -             D            D           D          H 
+- - - Consider:
+- - - ACE_DIAMONDS 
+- - -            H 
+- - - Budget: 0
+
+===================
+- - - Keep:
+- - - JACK_DIAMONDS QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- - -             D            D           D            H 
+- - - Consider:
+- - - 
+- - - 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - JACK_DIAMONDS QUEEN_HEARTS ACE_HEARTS 
+- -             D            D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 0
+
+===================
+- - Keep:
+- - JACK_DIAMONDS QUEEN_HEARTS ACE_DIAMONDS 
+- -             D            D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- JACK_DIAMONDS KING_SPADES 
+-             D           D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - JACK_DIAMONDS KING_SPADES ACE_HEARTS 
+- -             D           D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 0
+
+===================
+- - Keep:
+- - JACK_DIAMONDS KING_SPADES ACE_DIAMONDS 
+- -             D           D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- JACK_DIAMONDS ACE_HEARTS 
+-             D          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 0
+
+===================
+- Keep:
+- JACK_DIAMONDS ACE_DIAMONDS 
+-             D            H 
+- Consider:
+- 
+- 
+- Budget: 0
+
+===================
+Keep:
+QUEEN_HEARTS 
+           D 
+Consider:
+KING_SPADES ACE_HEARTS ACE_DIAMONDS 
+          D          H            H 
+Budget: 1
+
+===================
+- Keep:
+- QUEEN_HEARTS KING_SPADES 
+-            D           D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 1
+
+===================
+- - Keep:
+- - QUEEN_HEARTS KING_SPADES ACE_HEARTS 
+- -            D           D          H 
+- - Consider:
+- - ACE_DIAMONDS 
+- -            H 
+- - Budget: 0
+
+===================
+- - Keep:
+- - QUEEN_HEARTS KING_SPADES ACE_DIAMONDS 
+- -            D           D            H 
+- - Consider:
+- - 
+- - 
+- - Budget: 0
+
+===================
+- Keep:
+- QUEEN_HEARTS ACE_HEARTS 
+-            D          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 0
+
+===================
+- Keep:
+- QUEEN_HEARTS ACE_DIAMONDS 
+-            D            H 
+- Consider:
+- 
+- 
+- Budget: 0
+
+===================
+Keep:
+KING_SPADES 
+          D 
+Consider:
+ACE_HEARTS ACE_DIAMONDS 
+         H            H 
+Budget: 1
+
+===================
+- Keep:
+- KING_SPADES ACE_HEARTS 
+-           D          H 
+- Consider:
+- ACE_DIAMONDS 
+-            H 
+- Budget: 0
+
+===================
+- Keep:
+- KING_SPADES ACE_DIAMONDS 
+-           D            H 
+- Consider:
+- 
+- 
+- Budget: 0
+
+===================
+Keep:
+ACE_HEARTS 
+         H 
+Consider:
+ACE_DIAMONDS 
+           H 
+Budget: 0
+
+===================
+Keep:
+ACE_DIAMONDS 
+           H 
+Consider:
+
+
+Budget: 0
+
+===================
+Keep:
+
+
+Consider:
+TWO_CLUBS THREE_CLUBS NINE_SPADES JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES KING_DIAMONDS ACE_HEARTS ACE_DIAMONDS 
+        H           H           H           D             D            D           D             D          H            H 
+Budget: 0
+
+===================
+Keep:
+JACK_SPADES 
+          D 
+Consider:
+JACK_DIAMONDS QUEEN_HEARTS KING_SPADES KING_DIAMONDS ACE_HEARTS ACE_DIAMONDS 
+            D            D           D             D          H            H 
+Budget: 0
+
+===================
+- Keep:
+- JACK_SPADES JACK_DIAMONDS 
+-           D             D 
+- Consider:
+- QUEEN_HEARTS KING_SPADES KING_DIAMONDS ACE_HEARTS ACE_DIAMONDS 
+-            D           D             D          H            H 
+- Budget: 0
+
+===================
+- - Keep:
+- - JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS 
+- -           D             D            D 
+- - Consider:
+- - KING_SPADES KING_DIAMONDS ACE_HEARTS ACE_DIAMONDS 
+- -           D             D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES 
+- - -           D             D            D           D 
+- - - Consider:
+- - - KING_DIAMONDS ACE_HEARTS ACE_DIAMONDS 
+- - -             D          H            H 
+- - - Budget: 0
+
+===================
+- - - - Keep:
+- - - - JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES KING_DIAMONDS 
+- - - -           D             D            D           D             D 
+- - - - Consider:
+- - - - ACE_HEARTS ACE_DIAMONDS 
+- - - -          H            H 
+- - - - Budget: 0
+
+>>> Hand: JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_SPADES KING_DIAMONDS 
+          D             D            D           D             D 
+>>> two-pairs of 2002714
+
+===================
+- - - Keep:
+- - - JACK_SPADES JACK_DIAMONDS QUEEN_HEARTS KING_DIAMONDS 
+- - -           D             D            D             D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - JACK_SPADES JACK_DIAMONDS KING_SPADES 
+- -           D             D           D 
+- - Consider:
+- - KING_DIAMONDS ACE_HEARTS ACE_DIAMONDS 
+- -             D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - JACK_SPADES JACK_DIAMONDS KING_SPADES KING_DIAMONDS 
+- - -           D             D           D             D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - JACK_SPADES JACK_DIAMONDS KING_DIAMONDS 
+- -           D             D             D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 0
+
+===================
+- Keep:
+- JACK_SPADES QUEEN_HEARTS 
+-           D            D 
+- Consider:
+- KING_SPADES KING_DIAMONDS ACE_HEARTS ACE_DIAMONDS 
+-           D             D          H            H 
+- Budget: 0
+
+===================
+- - Keep:
+- - JACK_SPADES QUEEN_HEARTS KING_SPADES 
+- -           D            D           D 
+- - Consider:
+- - KING_DIAMONDS ACE_HEARTS ACE_DIAMONDS 
+- -             D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - JACK_SPADES QUEEN_HEARTS KING_SPADES KING_DIAMONDS 
+- - -           D            D           D             D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - JACK_SPADES QUEEN_HEARTS KING_DIAMONDS 
+- -           D            D             D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 0
+
+===================
+- Keep:
+- JACK_SPADES KING_SPADES 
+-           D           D 
+- Consider:
+- KING_DIAMONDS ACE_HEARTS ACE_DIAMONDS 
+-             D          H            H 
+- Budget: 0
+
+===================
+- - Keep:
+- - JACK_SPADES KING_SPADES KING_DIAMONDS 
+- -           D           D             D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 0
+
+===================
+- Keep:
+- JACK_SPADES KING_DIAMONDS 
+-           D             D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 0
+
+===================
+Keep:
+JACK_DIAMONDS 
+            D 
+Consider:
+QUEEN_HEARTS KING_SPADES KING_DIAMONDS ACE_HEARTS ACE_DIAMONDS 
+           D           D             D          H            H 
+Budget: 0
+
+===================
+- Keep:
+- JACK_DIAMONDS QUEEN_HEARTS 
+-             D            D 
+- Consider:
+- KING_SPADES KING_DIAMONDS ACE_HEARTS ACE_DIAMONDS 
+-           D             D          H            H 
+- Budget: 0
+
+===================
+- - Keep:
+- - JACK_DIAMONDS QUEEN_HEARTS KING_SPADES 
+- -             D            D           D 
+- - Consider:
+- - KING_DIAMONDS ACE_HEARTS ACE_DIAMONDS 
+- -             D          H            H 
+- - Budget: 0
+
+===================
+- - - Keep:
+- - - JACK_DIAMONDS QUEEN_HEARTS KING_SPADES KING_DIAMONDS 
+- - -             D            D           D             D 
+- - - Consider:
+- - - ACE_HEARTS ACE_DIAMONDS 
+- - -          H            H 
+- - - Budget: 0
+
+===================
+- - Keep:
+- - JACK_DIAMONDS QUEEN_HEARTS KING_DIAMONDS 
+- -             D            D             D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 0
+
+===================
+- Keep:
+- JACK_DIAMONDS KING_SPADES 
+-             D           D 
+- Consider:
+- KING_DIAMONDS ACE_HEARTS ACE_DIAMONDS 
+-             D          H            H 
+- Budget: 0
+
+===================
+- - Keep:
+- - JACK_DIAMONDS KING_SPADES KING_DIAMONDS 
+- -             D           D             D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 0
+
+===================
+- Keep:
+- JACK_DIAMONDS KING_DIAMONDS 
+-             D             D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 0
+
+===================
+Keep:
+QUEEN_HEARTS 
+           D 
+Consider:
+KING_SPADES KING_DIAMONDS ACE_HEARTS ACE_DIAMONDS 
+          D             D          H            H 
+Budget: 0
+
+===================
+- Keep:
+- QUEEN_HEARTS KING_SPADES 
+-            D           D 
+- Consider:
+- KING_DIAMONDS ACE_HEARTS ACE_DIAMONDS 
+-             D          H            H 
+- Budget: 0
+
+===================
+- - Keep:
+- - QUEEN_HEARTS KING_SPADES KING_DIAMONDS 
+- -            D           D             D 
+- - Consider:
+- - ACE_HEARTS ACE_DIAMONDS 
+- -          H            H 
+- - Budget: 0
+
+===================
+- Keep:
+- QUEEN_HEARTS KING_DIAMONDS 
+-            D             D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 0
+
+===================
+Keep:
+KING_SPADES 
+          D 
+Consider:
+KING_DIAMONDS ACE_HEARTS ACE_DIAMONDS 
+            D          H            H 
+Budget: 0
+
+===================
+- Keep:
+- KING_SPADES KING_DIAMONDS 
+-           D             D 
+- Consider:
+- ACE_HEARTS ACE_DIAMONDS 
+-          H            H 
+- Budget: 0
+
+===================
+Keep:
+KING_DIAMONDS 
+            D 
+Consider:
+ACE_HEARTS ACE_DIAMONDS 
+         H            H 
+Budget: 0
+
+{ combination: 'straight', value: 4534655 }
+done!

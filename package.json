@@ -1,0 +1,20 @@
+{
+  "name": "btc",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "lint": "./node_modules/.bin/tslint --project tsconfig.json src/**/*.ts",
+    "start": "./node_modules/.bin/ts-node src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^3.3.0",
+    "typescript": "^2.6.1"
+  },
+  "dependencies": {
+    "tslint": "^5.8.0",
+    "tslint-eslint-rules": "^4.1.1"
+  }
+}
