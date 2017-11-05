@@ -20,3 +20,12 @@ For example,
 ```
 npm run start TH JH QC QD QS QH KH AH 2S 6S
 ```
+
+Additionally you may want to check linting
+```
+npm run lint
+```
+or see some tests
+```
+npm test
+```
