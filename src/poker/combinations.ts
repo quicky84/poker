@@ -1,3 +1,10 @@
+/**
+ * This module defines Poker hands and attaches values to every particular hand,
+ * so that both inter and intra combination orders are respected.
+ *
+ * E.g. value_two_pairs < value_one_pair and
+ *      queen-straight < king-straight
+ */
 import { Card, Face, order } from './deck52';
 
 enum Combination {
@@ -34,52 +41,91 @@ function value_straight(h: Card[]) {
     return STRAIGHT + value_highest(h);
 }
 
-    // h[2] will always participate the four of a kind combination
 function value_four_of_a_kind(h: Card[]) {
-    return FOUR_OF_A_KIND + h[2].face;
+    // x x x x y
+    // y x x x x
+    // z x x x x
+    let v = FOUR_OF_A_KIND + 14*h[2].face;
+    if (h[2].face === h[0].face) {
+        // x x x x y
+        v += h[4].face;
+    } else {
+        // h[2].face = h[4].face
+        // y x x x x
+        v += h[0].face;
+    }
+    return v;
 }
 
 function value_full_house(h: Card[]) {
-    return FULL_HOUSE + h[2].face;
+    // x x x y y
+    // x x x z z
+    // x x y y y
+    let v = FULL_HOUSE + 14*h[2].face;
+    if (h[2].face === h[1].face) {
+        // x x x y y
+        v += h[3].face;
+    } else {
+        // h[2].face === h[3].face
+        // y y x x x
+        v += h[1].face;
+    }
+    return v;
 }
 
 function value_three_of_a_kind(h: Card[]) {
-    return THREE_OF_A_KIND + h[2].face;
+    // x x x y p
+    // x x x z k
+    // z x x x k
+    let v = THREE_OF_A_KIND + 14*14*h[2].face;
+    if (h[0].face === h[1].face && h[1].face === h[2].face) {
+        // x x x y z
+        v += (h[3].face + 14*h[4].face);
+    } else
+    if (h[1].face === h[2].face && h[2].face === h[3].face) {
+        // z x x x y
+        v += (h[0].face + 14*h[4].face);
+    } else {
+        // y z x x x
+        v += (h[0].face + 14*h[1].face);
+    }
+
+    return v;
 }
 
 // value = TWO_PAIRS + 14*14*HighPairCard + 14*LowPairCard + UnmatchedCard
 function value_two_pairs(h: Card[]) {
-    let v = 0;
+    let v = TWO_PAIRS;
 
-    if( h[0].face === h[1].face && h[2].face === h[3].face ) {
-        v = 14*14*h[2].face + 14*h[0].face + h[4].face;
+    if (h[0].face === h[1].face && h[2].face === h[3].face) {
+        v += (14*14*h[2].face + 14*h[0].face + h[4].face);
     } else
-    if( h[0].face === h[1].face && h[3].face === h[4].face ) {
-        v = 14*14*h[3].face + 14*h[0].face + h[2].face;
+    if (h[0].face === h[1].face && h[3].face === h[4].face) {
+        v += (14*14*h[3].face + 14*h[0].face + h[2].face);
     } else {
-        v = 14*14*h[3].face + 14*h[1].face + h[0].face;
+        v += (14*14*h[3].face + 14*h[1].face + h[0].face);
     }
 
-    return TWO_PAIRS + v;
+    return  v;
 }
 
 // value = ONE_PAIR + 14^3*PairCard + 14^2*HighestCard + 14*MiddleCard + LowestCard
 function value_one_pair(h: Card[]) {
-    let v = 0;
+    let v = ONE_PAIR;
 
-    if ( h[0].face === h[1].face ) {
-        v = 14*14*14*h[0].face + h[2].face + 14*h[3].face + 14*14*h[4].face;
+    if (h[0].face === h[1].face) {
+        v += (14*14*14*h[0].face + h[2].face + 14*h[3].face + 14*14*h[4].face);
     } else
-    if ( h[1].face === h[2].face ) {
-        v = 14*14*14*h[1].face + h[0].face + 14*h[3].face + 14*14*h[4].face;
+    if (h[1].face === h[2].face) {
+        v += (14*14*14*h[1].face + h[0].face + 14*h[3].face + 14*14*h[4].face);
     } else
-    if ( h[2].face === h[3].face ) {
-        v = 14*14*14*h[2].face + h[0].face + 14*h[1].face + 14*14*h[4].face;
+    if (h[2].face === h[3].face) {
+        v += (14*14*14*h[2].face + h[0].face + 14*h[1].face + 14*14*h[4].face);
     } else {
-        v = 14*14*14*h[3].face + h[0].face + 14*h[1].face + 14*14*h[2].face;
+        v += (14*14*14*h[3].face + h[0].face + 14*h[1].face + 14*14*h[2].face);
     }
 
-    return ONE_PAIR + v;
+    return v;
 }
 
 // value =  14^4*highestCard + 14^3*2ndHighestCard + 14^2*3rdHighestCard + 14^1*4thHighestCard + LowestCard
@@ -183,6 +229,7 @@ function is_straight(h: Card[]): boolean {
 
 
 type HandValue = {combination: Combination, value: number};
+
 function hand_value(cards: Card[]): HandValue | null {
     if (cards.length !== 5) {
         return null;
@@ -219,18 +266,4 @@ function hand_value(cards: Card[]): HandValue | null {
         { return {combination: Combination.HIGHEST_CARD, value: value_highest(h)}; }
 }
 
-function better_hand(h1: HandValue, h2: HandValue): HandValue {
-    if (h1.combination === undefined && h2.combination === undefined){
-        // return any
-        return h1;
-    }
-    if (h1.combination !== undefined && h2.combination === undefined){
-        return h1;
-    }
-    if (h1.combination === undefined && h2.combination !== undefined){
-        return h2;
-    }
-    return h1.value > h2.value ? h1 : h2;
-}
-
-export { Combination, HandValue, hand_value, better_hand};
+export { Combination, HandValue, hand_value};
