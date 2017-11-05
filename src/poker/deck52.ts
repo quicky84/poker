@@ -1,3 +1,8 @@
+/**
+ * This module defines faces and suits making up cards and consequently the deck.
+ * It also defines partial order relation for the cards and
+ * rules of parsing their string representations and encoding them back to strings.
+ */
 enum Face {
     TWO = 2, THREE = 3, FOUR = 4, FIVE = 5, SIX = 6, SEVEN = 7, EIGHT = 8,
     NINE = 9, TEN = 10, JACK = 11, QUEEN = 12, KING = 13, ACE = 14
