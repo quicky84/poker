@@ -33,14 +33,18 @@ function optimize(keep: CardEx[], consider: CardEx[], budget: number, log: boole
     }
 
     if(keep.length === 5) {
-        const {combination, value} = hand_value(keep.map(card_ex=> card_ex.card));
+        // keep contains 5 valid cards => hand_value is well-deined
+        const {combination, value} = hand_value(keep.map(card_ex=> card_ex.card))!;
         if(log){
             console.log(`>>> Hand: ${summarize(keep)}\n>>> ${combination} of ${value}\n`);
         }
         return {combination, value};
     }
 
-    let bh: HandValue = { value: -1 };
+    // variable to hold the best hand
+    // initialize it with the negative value,
+    // so any other combination will be better
+    let bh: HandValue = { combination: Combination.HIGHEST_CARD, value: -1 };
 
     for(let i = 0; i < consider.length; i++) {
         const next = consider[i];
@@ -87,10 +91,13 @@ function best_hand(input: string): {hand: string, deck: string, best: string} | 
         hand = ten_cards.slice(0, 5).map((c): CardEx=> ({card: c, loc: Loc.HAND})),
         deck = ten_cards.slice(5, 10).map((c): CardEx=> ({card: c, loc: Loc.DECK}));
 
-    let bh: HandValue = { value: -1 };
+    // variable to hold the best hand
+    // initialize it with the negative value,
+    // so any other combination will be better
+    let bh: HandValue = { combination: Combination.HIGHEST_CARD, value: -1 };
 
     for (let n = 0; n <= deck.length; n++){
-        const hand_ex = n===0
+        const hand_ex = n === 0
             ? [...hand]
             : [...hand, ...deck.slice(0, n)];
 
@@ -106,7 +113,7 @@ function best_hand(input: string): {hand: string, deck: string, best: string} | 
     return {
         hand: Deck.stringify(hand.map(c=> c.card)),
         deck: Deck.stringify(deck.map(c=> c.card)),
-        best: bh.combination!
+        best: bh.combination
     };
 }
 

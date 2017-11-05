@@ -182,10 +182,10 @@ function is_straight(h: Card[]): boolean {
 }
 
 
-type HandValue = {combination?: Combination, value: number};
-function hand_value(cards: Card[]): HandValue {
+type HandValue = {combination: Combination, value: number};
+function hand_value(cards: Card[]): HandValue | null {
     if (cards.length !== 5) {
-        return {value: -1};
+        return null;
     }
 
     // copy cards
