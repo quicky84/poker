@@ -1,12 +1,14 @@
 import * as Deck from './poker/deck52';
 import {Combination, hand_value, HandValue} from './poker/combinations';
 
+// === Helpers ===>
 enum Loc { DECK, HAND }
 
 interface CardEx {
     card: Deck.Card;
     loc: Loc;
 }
+
 
 function summarize(cards: CardEx[], prefix: string = ""): string {
     let hand = prefix;
@@ -23,6 +25,7 @@ function summarize(cards: CardEx[], prefix: string = ""): string {
 function better_hand(h1: HandValue, h2: HandValue): HandValue {
     return h1.value > h2.value ? h1 : h2;
 }
+// <===  helpers ===
 
 /**
  * Recursievly builds up a hand and scores it
