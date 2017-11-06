@@ -1,6 +1,7 @@
 node_modules/
 .vscode/
 build/
+.nyc_output/
 
 log.log
 npm-debug.log

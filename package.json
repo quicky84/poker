@@ -1,23 +1,32 @@
 {
-  "name": "psychic-poker-player",
-  "version": "0.0.1",
-  "description": "Psychic Poker Player",
-  "main": "index.ts",
-  "scripts": {
-    "lint": "node_modules/.bin/tslint --project tsconfig.json src/**/*.ts",
-    "test": "node_modules/.bin/tsc && node_modules/.bin/ava build/**/*_test.js",
-    "start": "node_modules/.bin/ts-node src/index.ts"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^8.0.47",
-    "ava": "^0.23.0",
-    "ts-node": "^3.3.0",
-    "typescript": "^2.6.1"
-  },
-  "dependencies": {
-    "tslint": "^5.8.0",
-    "tslint-eslint-rules": "^4.1.1"
-  }
+    "name": "psychic-poker-player",
+    "version": "0.0.1",
+    "description": "Psychic Poker Player",
+    "main": "index.ts",
+    "scripts": {
+        "clean": "node_modules/.bin/rimraf build ./nyc_output",
+        "lint": "node_modules/.bin/tslint --project tsconfig.json src/**/*.ts",
+        "build": "node_modules/.bin/tsc",
+        "test": "npm run clean && npm run build && node_modules/.bin/nyc node_modules/.bin/ava",
+        "start": "node_modules/.bin/ts-node src/index.ts"
+    },
+    "ava": {
+        "files": [
+            "build/**/*_test.js"
+        ]
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "8.0.47",
+        "ava": "0.23.0",
+        "nyc": "11.3.0",
+        "rimraf": "2.6.2",
+        "ts-node": "3.3.0",
+        "typescript": "2.6.1"
+    },
+    "dependencies": {
+        "tslint": "5.8.0",
+        "tslint-eslint-rules": "4.1.1"
+    }
 }
