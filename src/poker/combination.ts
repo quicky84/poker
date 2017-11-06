@@ -1,6 +1,7 @@
 /**
- * This module defines Poker hands and attaches values to every particular hand,
- * so that both inter and intra combination orders are respected.
+ * This module defines Poker combinations and attaches values
+ * to every particular combination, so that both inter and
+ * intra combination orders are respected.
  *
  * E.g. value_two_pairs < value_one_pair and
  *      queen-straight < king-straight
@@ -16,7 +17,7 @@ enum Combination {
     THREE_OF_A_KIND = 'three-of-a-kind',
     TWO_PAIRS       = 'two-pairs',
     ONE_PAIR        = 'one-pair',
-    HIGHEST_CARD    = 'highest-card '
+    HIGHEST_CARD    = 'highest-card'
 }
 
 const STRAIGHT_FLUSH  = 8000000;

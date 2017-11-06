@@ -2,8 +2,22 @@ import test from 'ava';
 
 import * as Deck from './deck52';
 
-test("Parse of invalid input", t => {
+test("Parse invalid input: too few symbols", t => {
     const s = "KS K";
+    const cards = Deck.parse(s);
+
+    t.is(cards, null);
+});
+
+test("Parse invalid input: face is not defined", t => {
+    const s = "KS VD";
+    const cards = Deck.parse(s);
+
+    t.is(cards, null);
+});
+
+test("Parse invalid input: suite is not defined", t => {
+    const s = "KS KG";
     const cards = Deck.parse(s);
 
     t.is(cards, null);
