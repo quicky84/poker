@@ -78,11 +78,11 @@ function decoder(s: string): Card | null {
     if(s.length !== 2) {
         return null;
     }
-    const face = decode_Face.get(s.charAt(0));
+    const face = decode_Face.get(s.charAt(0).toUpperCase());
     if (face === undefined) {
         return null;
     }
-    const suit = decode_Suit.get(s.charAt(1));
+    const suit = decode_Suit.get(s.charAt(1).toUpperCase());
     if (suit === undefined) {
         return null;
     }
