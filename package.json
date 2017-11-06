@@ -3,19 +3,27 @@
     "version": "0.0.1",
     "description": "Psychic Poker Player",
     "main": "index.ts",
+    "bin": {
+        "ava": "node_modules/.bin/ava",
+        "rimraf": "node_modules/.bin/rimraf",
+        "tslint": "node_modules/.bin/tslint",
+        "tsc": "node_modules/.bin/tsc",
+        "nyc": "node_modules/.bin/nyc",
+        "ts-node": "node_modules/.bin/ts-node"
+    },
     "scripts": {
-        "clean": "node_modules/.bin/rimraf build ./nyc_output",
-        "lint": "node_modules/.bin/tslint --project tsconfig.json src/**/*.ts",
-        "build": "node_modules/.bin/tsc",
-        "test": "npm run clean && npm run build && node_modules/.bin/nyc node_modules/.bin/ava",
-        "start": "node_modules/.bin/ts-node src/index.ts"
+        "clean": "rimraf build ./nyc_output",
+        "lint": "tslint --project tsconfig.json src/**/*.ts",
+        "test": "npm run clean && tsc && nyc ava",
+        "start": "ts-node src/index.ts",
+        "all": "npm run clean && npm run lint && npm run test && npm run start"
     },
     "ava": {
         "files": [
             "build/**/*_test.js"
         ]
     },
-    "author": "",
+    "author": "Victor Ermolaev",
     "license": "ISC",
     "devDependencies": {
         "@types/node": "8.0.47",
