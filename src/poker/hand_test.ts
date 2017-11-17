@@ -1,7 +1,7 @@
 import test from 'ava';
 
-import { best_hand, optimize, Loc, CardEx } from './hand';
-import { Face, Suit, parse } from './deck52';
+import { best_hand, optimize } from './hand';
+import { Face, Suit, Card, parse } from './deck52';
 import { Combination } from './combination';
 
 
@@ -21,31 +21,24 @@ test("Invalid input: too many cards", t=> {
 });
 
 test("Optimize: 1 step, pick best between two possible", t=> {
-    const keep = parse("8C 8D 8H 8S")!
-        .map((c): CardEx=> ({card: c, loc: Loc.HAND}));
-    const consider: CardEx[] = [
-        {card: {face: Face.TEN, suit: Suit.CLUBS}, loc: Loc.HAND},
-        {card: {face: Face.ACE, suit: Suit.CLUBS}, loc: Loc.DECK},
+    const keep = parse("AC AD AH KS")!;
+    const consider: Card[] = [
+        {face: Face.KING, suit: Suit.CLUBS},
+        {face: Face.ACE, suit: Suit.CLUBS},
     ];
 
-    t.is(optimize(keep, consider, 1).combination, Combination.FOUR_OF_A_KIND);
+    t.is(optimize(keep, consider).combination, Combination.FOUR_OF_A_KIND);
 });
 
-test("Optimize: 1 step, pick best between two possible under budget", t=> {
-    const keep = parse("AC AD AH KS")!
-        .map((c): CardEx=> ({card: c, loc: Loc.HAND}));
-    const consider: CardEx[] = [
-        {card: {face: Face.KING, suit: Suit.CLUBS}, loc: Loc.DECK},
-        {card: {face: Face.ACE, suit: Suit.CLUBS}, loc: Loc.HAND},
-    ];
+test("Full optimize", t=> {
+    const input = "2H 3H 4H 5H TC 5C QS KD 2D 6H";
 
-    // ideally one would choose for four of a kind
-    // but the budget forces to choose full house
-
-    t.is(optimize(keep, consider, 0).combination, Combination.FULL_HOUSE);
+    // two fives, although if unordered a straight flush can be arranged
+    t.is(best_hand(input)!.best, Combination.ONE_PAIR);
 });
 
-test("Best hand computed correctly", t=>{
+
+test("Best hand computed correctly", t=> {
     const inputs = [
         ["TH JH QC QD QS QH KH AH 2S 6S", Combination.STRAIGHT_FLUSH],
         ["2H 2S 3H 3S 3C 2D 3D 6C 9C TH", Combination.FOUR_OF_A_KIND],
