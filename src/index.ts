@@ -1,7 +1,7 @@
 import { best_hand } from './poker';
 
 /**
- * For a given input reporst the best possible hand
+ * For a given input report the best possible hand
  * or invalid input
  */
 function handle(input: string): string {

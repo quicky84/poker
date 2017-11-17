@@ -9,7 +9,7 @@
 import { Card, Face, order } from './deck52';
 
 enum Combination {
-    STRAIGHT_FLUSH  = 'staright-flush',
+    STRAIGHT_FLUSH  = 'straight-flush',
     FOUR_OF_A_KIND  = 'four-of-a-kind',
     FULL_HOUSE      = 'full-house',
     FLUSH           = 'flush',
@@ -222,7 +222,7 @@ function is_straight(h: Card[]): boolean {
         h[3].face === Face.FIVE && h[4].face === Face.ACE) {
             return true;
     }
-    // otherwise, the difference in faces between concequent catds must be 1
+    // otherwise, the difference in faces between consequent cards must be 1
     return h.slice(1)
             .map((c, i)=> c.face - h[i].face)
             .every(d=> d===1);
